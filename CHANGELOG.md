@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.1.1
+
+- コマンド名を変更: `Snapshot current file as analysis baseline` → `Snapshot current file as baseline`、`Clear analysis baseline snapshot` → `Clear baseline snapshot`。
+- README を整理（用途説明の簡潔化、開発向け記述の削除）。
+- 挙動の変更なし。
+
 ## 0.1.0
 
 - 初版。

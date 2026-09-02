@@ -2,7 +2,7 @@
   "name": "nawatobi",
   "displayName": "Nawatobi — baseline-aware Go to Line",
   "description": "差分エディタで『基準時点の行番号』から現在の作業ツリー行へ写像してジャンプする",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "tronics25",
   "license": "MIT",
   "repository": {
