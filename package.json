@@ -1,0 +1,82 @@
+{
+  "name": "nawatobi",
+  "displayName": "Nawatobi — baseline-aware Go to Line",
+  "description": "差分エディタで『基準時点の行番号』から現在の作業ツリー行へ写像してジャンプする",
+  "version": "0.1.0",
+  "publisher": "tronics25",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tronics25/nawatobi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tronics25/nawatobi/issues"
+  },
+  "homepage": "https://github.com/tronics25/nawatobi#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "diff",
+    "go to line",
+    "static analysis",
+    "git",
+    "navigation",
+    "code review"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "nawatobi.gotoLine",
+        "title": "Go to Line (baseline-aware)",
+        "category": "Nawatobi"
+      },
+      {
+        "command": "nawatobi.snapshotBaseline",
+        "title": "Snapshot current file as analysis baseline",
+        "category": "Nawatobi"
+      },
+      {
+        "command": "nawatobi.clearSnapshot",
+        "title": "Clear analysis baseline snapshot",
+        "category": "Nawatobi"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "nawatobi.gotoLine",
+        "key": "ctrl+g",
+        "mac": "ctrl+g",
+        "when": "isInDiffEditor && textInputFocus"
+      },
+      {
+        "command": "nawatobi.gotoLine",
+        "key": "ctrl+k ctrl+g",
+        "mac": "ctrl+k ctrl+g",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "typecheck": "tsc --noEmit",
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "vscode:prepublish": "node esbuild.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.2.0",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.3.0"
+  }
+}
