@@ -22,7 +22,7 @@
   "keywords": [
     "diff",
     "go to line",
-    "static analysis",
+    "goto",
     "git",
     "navigation",
     "code review"
@@ -40,12 +40,12 @@
       },
       {
         "command": "nawatobi.snapshotBaseline",
-        "title": "Snapshot current file as analysis baseline",
+        "title": "Snapshot current file as baseline",
         "category": "Nawatobi"
       },
       {
         "command": "nawatobi.clearSnapshot",
-        "title": "Clear analysis baseline snapshot",
+        "title": "Clear baseline snapshot",
         "category": "Nawatobi"
       }
     ],
