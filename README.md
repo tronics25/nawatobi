@@ -52,16 +52,6 @@ Nawatobi は `git diff -U0` のハンクを解析して、基準行 → 現在�
 { "key": "ctrl+g", "command": "-workbench.action.gotoLine", "when": "isInDiffEditor && textInputFocus" }
 ```
 
-## 開発
-
-```bash
-npm install
-npm run compile     # dist/extension.js を生成
-```
-
-VS Code でこのフォルダを開き `F5`（Run Nawatobi）。別ウィンドウが起動する。
-`npm run watch` で再ビルド常駐。
-
 ## 既知の制限（v0.1）
 
 - 差分エディタの **左ペイン（変更前）にフォーカスがある状態** で実行すると、
